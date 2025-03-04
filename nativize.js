@@ -1,8 +1,12 @@
-export const check = () => {};
-export const prepare = () => {};
+export const check = async () => {
+  // check if meson is installed
+  // check if everything is is installed
+};
+export const prepare = async () => {
+};
 export const build = async () => {
   try {
-    //setup buildsir
+    //setup builddir
     await new Deno.Command("meson", {
       args: ["setup", "--reconfigure", "builddir"],
       cwd: import.meta.dirname,
@@ -16,8 +20,8 @@ export const build = async () => {
     console.error(error);
   }
 };
-export const run = () => {};
-export const clean = () => {
+export const run = async () => {};
+export const clean = async () => {
   try {
     await new Deno.Command("meson", {
       args: ["compile", "--clean", "-C", "builddir"],
