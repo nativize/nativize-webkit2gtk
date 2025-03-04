@@ -1,7 +1,8 @@
 #include <gtk/gtk.h>
 #include <webkit2/webkit2.h>
 
-int main(int argc, char **argv) {
+int main(int argc, char **argv)
+{
   gtk_init(&argc, &argv);
 
   // Create main window
