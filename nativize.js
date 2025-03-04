@@ -20,7 +20,6 @@ export const run = async () => {
   await new Deno.Command(`${import.meta.dirname}/builddir/nativize`).spawn()
     .status;
 };
-export const run = async () => {};
 export const clean = async () => {
   await new Deno.Command("meson", {
     args: ["compile", "--clean", "-C", "builddir"],
